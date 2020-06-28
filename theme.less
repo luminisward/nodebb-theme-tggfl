@@ -1,0 +1,23 @@
+@import "../nodebb-theme-persona/theme";
+
+.categories-title {
+  background: #bd735e;
+  color: white;
+  font-size: 120%;
+  padding: 10px 20px;
+  font-weight: 700;
+  margin: 0 -16px;
+  border-radius: 10px 10px 0 0;
+}
+
+.categories,
+.category > ul {
+  > li {
+    &:nth-child(2n + 1) {
+      background: #ebefe8;
+    }
+    &:nth-child(2n) {
+      background: #fff;
+    }
+  }
+}

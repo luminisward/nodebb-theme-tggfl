@@ -1,0 +1,16 @@
+{
+  "name": "nodebb-theme-tggfl",
+  "version": "0.0.1",
+  "description": "A NodeBB theme for tggfl",
+  "main": "theme.less",
+  "nbbpm": {
+    "compatibility": "^1.13.0"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
