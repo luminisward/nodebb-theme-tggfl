@@ -13,11 +13,34 @@
 .categories,
 .category > ul {
   > li {
+    padding-left: 10px;
+
     &:nth-child(2n + 1) {
-      background: #ebefe8;
+      background: #faf6f4;
     }
     &:nth-child(2n) {
       background: #fff;
     }
+
+    .content{
+      img, .user-icon {
+				border: 1px solid #756f64; // 头像边框
+      }
+      
+      a.pull-left>span.avatar-rounded{
+				border: 1px solid #756f64; // 帖子列表自定义头像（懒得加class了…
+      }
+      
+      h2 {
+				font-size: 16px !important; // 自定义
+        font-weight: 700; // 自定义
+      }
+    }
   }
 }
+
+.category {
+	border-radius: 5px; // 自定义样式
+  box-shadow: 0 0 40px 0px #352f278f; // 自定义样式
+}
+
