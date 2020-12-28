@@ -7,7 +7,10 @@ body {
 	background: repeating-linear-gradient(0deg,#f8f8f8,#f8f8f8 1px,#fff 0,#fff 2px);
 
 	&.page-categories, &.page-category, &.page-topic{
-	  background: linear-gradient(0deg, rgba(248,248,248,1) 0%, rgba(255,255,255,0) 50%) fixed,url("@{bgimg}") 100% 100% no-repeat fixed,repeating-linear-gradient(0deg,#f8f8f8,#f8f8f8 1px,#fff 0,#fff 2px);
+    background: 
+      linear-gradient(0deg, rgba(248,248,248,1) 0%, rgba(255,255,255,0) 50%) fixed,
+      url("@{bgimg}") center top /cover no-repeat fixed,
+      repeating-linear-gradient(0deg,#f8f8f8,#f8f8f8 1px,#fff 0,#fff 2px);
 	}
 	
 	@media (min-width: 979px)
