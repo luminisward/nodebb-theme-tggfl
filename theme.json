@@ -1,6 +1,6 @@
 {
     "id": "nodebb-theme-tggfl",
-    "name": "TGGFL theme",
-    "description": "TGGFL测试模板",
-    "url": "https://github.com/nodebb/nodebb-theme-quickstart"
+    "name": "tggfl",
+    "description": "develop for tggfl",
+    "url": "https://github.com/luminisward/nodebb-theme-tggfl"
 }

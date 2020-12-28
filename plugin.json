@@ -1,10 +1,13 @@
 {
-	"id": "nodebb-theme-quickstart",
-	"library": "./lib/theme.js",
+	"id": "nodebb-theme-tggfl",
+	"library": "library.js",
 	"hooks": [
-		{
-			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
-		}
+		{ "hook": "filter:teasers.get", "method": "getTeasers" },
+		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
+		{ "hook": "filter:config.get", "method": "getThemeConfig" },
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
 	"scripts": [
 		"lib/client.js",

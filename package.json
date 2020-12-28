@@ -1,7 +1,7 @@
 {
-  "name": "nodebb-theme-quickstart",
+  "name": "nodebb-theme-tggfl",
   "version": "1.0.0",
-  "description": "Enter a description here",
+  "description": "tggfl test theme",
   "main": "theme.less",
   "husky": {
     "hooks": {
