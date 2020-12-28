@@ -1,0 +1,274 @@
+.category {
+	border-radius: 5px; 
+
+	.topic-list {
+		overflow-x: hidden;
+		overflow-y: auto;
+		margin-top: 0 !important;
+	}
+
+	.category-topics-list{
+		box-shadow: 0 0 10px 2px #58525269;
+		border-radius: 10px;
+	}
+
+	.category-title{
+		border-radius: 10px 10px 0 0;
+		background: @tggfl;
+		color: white;
+		font-size: 1.2em;
+		font-weight: 700;
+		line-height: 2em;
+		padding: 10px 20px;
+
+		.fa-rss-square{
+			color:#fffbeacc;
+			margin-left: 0.5em;
+			transition: color 0.3s;
+
+			&:hover, &:active{
+			  color:#fffbeaff;
+			}
+		}
+
+		span[component="category/controls"]{
+			margin-right: 2em;
+
+		  button{
+				background: transparent;
+				padding: 5px 16px;
+				color: white;
+				border-width: 0 0 1px;
+				border-radius: 5px 5px 0 0;
+
+				&:hover, &:active{
+					background: lighten(@tggfl, 20%);
+				}
+			}
+		}
+
+		.btn-post{
+			float: right;
+			color: white;
+			font-weight: 700;
+			padding: 6px 25px;
+			border-radius: 30px;
+			box-shadow: inset 0px 0px 15px 1px #00b4ff;
+			border: 1px solid #00f8ff;
+			transition: all 0.3s;
+
+			&:hover, &:active{
+				box-shadow: inset 0px 0px 5px 20px #00b4ff;
+			}
+		}
+
+		&+ul[component=category]{
+			border-radius: 0 0 10px 10px;
+		}
+	}
+
+	ul[component="category"] {
+		> li {
+			list-style: none;
+			background: white;
+			border-top: 1px solid @gray-lighter;
+
+			&:not(.unread) {
+				.card {
+					border-color: lighten(@gray-light, 20%) !important;
+				}
+
+				h2 a {
+					color: @text-muted;
+				}
+			}
+
+			&.deleted {
+				-moz-opacity: 0.30;
+				opacity: 0.30;
+			}
+
+			.select {
+				position: relative;
+				.pointer;
+
+				&:before {
+					content: "";
+					display: none;
+				}
+
+				.fa-check {
+					padding: 14.5px;	/* 14.5*2 + 15 + 2px border = 46px */
+					border-radius: 50%;
+					position: absolute;
+					font-size: 15px;
+					opacity: 0;
+					top: 0px;
+					left: 0px;
+					border: 1px solid transparent;
+					background: white;
+					width: 100%;
+					height: 100%;
+					padding: 14px;
+
+					&:before {
+						.pointer;
+					}
+				}
+
+				.avatar {
+					opacity: 1;
+				}
+
+				.fa-check, .avatar {
+					.transition(.2s ease-in-out all);
+				}
+
+				float: left;
+			}
+
+			.avatar .select:hover {
+				.avatar {
+					opacity: 0;
+				}
+
+				.fa-check {
+					border: 1px solid @brand-primary;
+					color: @brand-primary;
+					opacity: 1;
+				}
+			}
+
+			&.selected {
+				.select .avatar {
+					opacity: 0;
+				}
+
+				.avatar .select .fa-check {
+					opacity: 1;
+					border: 1px solid @brand-success;
+					color: @brand-success;
+				}
+			}
+
+			.tag-list {
+				display: inline-block;
+				.tag {
+					text-transform: uppercase;
+					font-size: 10px;
+					background: lighten(@gray-lighter, 2.5%);
+					padding: 5px;
+					white-space: nowrap;
+				}
+			}
+
+			.fa-stack {
+				font-size: 90%;
+				border-radius: 50%;
+			}
+
+			.card .user-icon {
+				display: inline-block;
+				.user-icon-style(24px, 1.5rem, 50%);
+			}
+		}
+
+		&:last-child li {
+			border-bottom: 0;
+		}
+	}
+
+	.unread {
+		.topic-title {
+			font-weight: bold;
+		}
+	}
+}
+
+.category, .categories, .subcategory {
+	> p {
+		text-transform: uppercase;
+		color: @gray-light;
+	}
+
+	.description {
+		font-size: 1.2rem;
+		font-weight: normal;
+		line-height: 1.2;
+		color: @gray-light;
+		margin-top: 5px;
+		min-height: 25px
+	}
+
+	.description, .category-children {
+		margin-left: 62px;
+	}
+
+	.category-children {
+		display: block;
+		font-size: 15px;
+
+		small {
+			color: #999999;
+		}
+	}
+}
+
+
+[component="category-selector"], .category-dropdown-container {
+	.fa-stack {
+		font-size: 65%;
+		border-radius: 50%;
+	}
+
+	#category-dropdown-check:checked + .dropdown-menu {
+		display: block;
+	}
+}
+
+.category-dropdown-menu {
+	max-height: 500px;
+	overflow-y: auto;
+}
+
+.merge-topic-card {
+	position: fixed;
+	bottom: 10%;
+	right: 2rem;
+	z-index: 3;
+	.topics-section {
+		max-height: 500px;
+		overflow-y: auto;
+	}
+}
+
+@media screen and (min-width: @screen-sm-min) {
+	.merge-topic-card {
+		max-width: 33%;
+	}
+}
+
+@media (max-width: @screen-md-max) {
+	.category-title {
+		overflow: hidden;
+
+		.btn-post{
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			padding: 6px 9px 6px 11px!important;
+			background: @tggfl;
+			font-size: 0;
+
+			&::before{
+				content:"\f044";
+				font-size: 20px;
+				font-family: FontAwesome;
+			}
+		}
+
+		span[component="category/controls"]{
+			margin-right: 0!important;
+		}
+	}
+}

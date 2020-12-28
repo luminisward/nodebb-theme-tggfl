@@ -1,0 +1,50 @@
+@import "../nodebb-theme-persona/theme";
+
+@import "less/tggfl";
+
+@bgimg: "/assets/uploads/files/1606308029918-tempest.png";
+
+.topic{
+  background: white;
+  padding-top: 1em;
+  box-shadow: 0 0 10px 2px #58525269;
+}
+
+.topic, .category{
+  .bread-arrow{
+    padding-right: 0.2em;
+
+    ol.breadcrumb{
+      position: absolute;
+      left: 15px;
+      background: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 9px #33333375;
+      font-size: 18px;
+      line-height: 1.5em;
+      z-index: 99;
+      transition: all .2s;
+      transform: scaleY(0) translateY(-100%);
+
+      &>li{
+        display: block;
+        top: 0;
+
+        &+li:before{
+          content: "\f061";
+        }
+      }
+
+      
+    }
+
+    &:hover, &:active{
+      cursor: pointer;
+
+      ol.breadcrumb{
+        transform: scaleX(1);
+      }
+    }
+  }
+}
