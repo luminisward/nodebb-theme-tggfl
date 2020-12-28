@@ -1,25 +1,50 @@
 @import "../nodebb-theme-persona/theme";
 
-.categories-title {
-  background: #bd735e;
-  color: white;
-  font-size: 120%;
-  padding: 10px 20px;
-  font-weight: 700;
-  margin: 0 -16px;
-  border-radius: 10px 10px 0 0;
+@import "less/tggfl";
+
+@bgimg: "/plugins/nodebb-theme-tggfl/images/tempest.png";
+
+.topic{
+  background: white;
+  padding-top: 1em;
+  box-shadow: 0 0 10px 2px #58525269;
 }
 
-.categories,
-.category > ul {
-  > li {
-    padding-left: 10px;
+.topic, .category{
+  .bread-arrow{
+    padding-right: 0.2em;
 
-    &:nth-child(2n + 1) {
-      background: #faf6f4;
+    ol.breadcrumb{
+      position: absolute;
+      left: 15px;
+      background: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 9px #33333375;
+      font-size: 18px;
+      line-height: 1.5em;
+      z-index: 99;
+      transition: all .2s;
+      transform: scaleY(0) translateY(-100%);
+
+      &>li{
+        display: block;
+        top: 0;
+
+        &+li:before{
+          content: "\f061";
+        }
+      }
+
+      
     }
-    &:nth-child(2n) {
-      background: #fff;
+
+    &:hover, &:active{
+      cursor: pointer;
+
+      ol.breadcrumb{
+        transform: scaleX(1);
+      }
     }
 
     .content{
@@ -43,4 +68,3 @@
 	border-radius: 5px; // 自定义样式
   box-shadow: 0 0 40px 0px #352f278f; // 自定义样式
 }
-
