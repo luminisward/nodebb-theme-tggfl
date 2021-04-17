@@ -1,10 +1,10 @@
 {
   "name": "nodebb-theme-tggfl",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A NodeBB theme for tggfl",
   "main": "theme.less",
   "nbbpm": {
-    "compatibility": "^1.15.0"
+    "compatibility": "^1.16.0"
   },
   "keywords": [],
   "license": "MIT",
