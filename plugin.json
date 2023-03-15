@@ -1,6 +1,5 @@
 {
 	"id": "nodebb-theme-tggfl",
-	"library": "library.js",
 	"hooks": [
 		{ "hook": "filter:teasers.get", "method": "getTeasers" },
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },

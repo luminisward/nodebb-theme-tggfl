@@ -1,8 +1,8 @@
 {
   "name": "nodebb-theme-tggfl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A NodeBB theme for tggfl",
-  "main": "theme.less",
+  "main": "library.js",
   "nbbpm": {
     "compatibility": "^2.0.0"
   },
