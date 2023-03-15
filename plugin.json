@@ -11,18 +11,15 @@
 	],
 	"scripts": [
 		"lib/client.js",
-		"../nodebb-theme-persona/public/persona.js",
-		"../nodebb-theme-persona/lib/modules/nprogress.js",
-		"../nodebb-theme-persona/public/modules/autohidingnavbar.min.js",
-		"../nodebb-theme-persona/public/modules/quickreply.js"
-  ],
-	"acpScripts": [
-		"../nodebb-theme-persona/public/admin.js"
+		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
+		"../nodebb-theme-persona/public/persona.js"
 	],
 	"modules": {
-		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
-  },
-  "staticDirs": {
-    "images": "static/images"
-  }
+		"../admin/plugins/persona.js": "../nodebb-theme-persona/public/admin.js",
+		"persona/quickreply.js": "../nodebb-theme-persona/public/modules/quickreply.js",
+		"../client/account/theme.js": "../nodebb-theme-persona/public/settings.js"
+	},
+	"staticDirs": {
+		"images": "static/images"
+	}
 }
